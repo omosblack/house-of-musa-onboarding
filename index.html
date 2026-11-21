@@ -848,6 +848,7 @@
     <p class="kicker">You are in</p>
     <h2 id="doneTitle">Welcome to the House.</h2>
     <p class="lede">Your onboarding is complete. Here is everything on your record, and exactly what happens next.</p>
+    <p class="note" id="koreSubmitNote" role="alert" style="display:none;color:#9c1c1c;font-weight:400;margin:0 0 18px">Your onboarding could not be sent automatically. Please also send your downloaded summary to info@musathebrand.com so nothing is lost.</p>
     <div class="card white"><dl class="summary" id="summaryList"></dl></div>
     <div class="card">
       <h3>What happens next</h3>
@@ -895,6 +896,7 @@
         <li><strong style="font-weight:500">Never without Kore&rsquo;s approval:</strong> <span id="sheetApproval">Not briefed yet.</span></li>
       </ul>
       <div class="nav" style="justify-content:flex-start"><button class="btn gold" id="downloadSheetBtn" type="button">Download this assignment sheet</button></div>
+      <p class="note" id="paSubmitNote" role="alert" style="display:none;color:#9c1c1c;font-weight:400;margin:12px 0 0">Your onboarding could not be sent automatically. Please also send your downloaded summary to info@musathebrand.com so nothing is lost.</p>
     </div>
 
     <div class="card white">
@@ -912,6 +914,37 @@
         <div class="field"><label for="paStart">Start date</label><input id="paStart" type="date" /></div>
         <div class="field"><label for="paHours">Working hours</label><input id="paHours" type="text" placeholder="Days and hours, agreed with Kore" /></div>
       </div>
+    </div>
+
+    <div class="card white">
+      <h3>Sign the NDA</h3>
+      <p>Read all of it, check each acknowledgment separately, then sign with your full legal name.</p>
+      <div class="nda-text" tabindex="0" aria-label="Non disclosure agreement text">
+      <p class="nda-title">ONE-WAY NON-DISCLOSURE AND OWNERSHIP AGREEMENT</p>
+      <p>This Agreement is between Musa Group LLC, doing business as House of Musa (&ldquo;House of Musa&rdquo;), and the undersigned individual (&ldquo;Recipient&rdquo;), effective on the date Recipient signs below. It applies to employees, interns, contractors, creators, and suppliers engaged by House of Musa.</p>
+      <p><strong>1. One-way agreement.</strong> House of Musa will share Confidential Information and work materials with Recipient so Recipient can do their work. This Agreement protects House of Musa only. It places obligations on Recipient and gives Recipient no rights in anything House of Musa shares or anything Recipient creates for House of Musa. House of Musa takes on no confidentiality or other obligation to Recipient under this Agreement.</p>
+      <p><strong>2. What counts as Confidential Information.</strong> Everything Recipient sees, hears, receives, or creates through their work that is not public, including: unreleased designs, collections, tech packs, patterns, and samples; supplier, factory, and manufacturer identities, contacts, and pricing; wholesale and retail pricing strategy; customer, client, and partner lists and their contact details and order history; sales figures, revenue, budgets, and financial information; marketing plans, campaign concepts, launch dates, and ad account data; brand imagery, footage, and content before release; business plans and expansion plans; and personal information about the founder, team members, clients, and customers.</p>
+      <p><strong>3. Recipient&rsquo;s obligations.</strong> Recipient will: (a) keep all Confidential Information strictly confidential and disclose it to no one outside House of Musa; (b) use it only to do their House of Musa work, and for no personal or outside purpose; (c) not copy, photograph, record, download, or remove Confidential Information except as their role requires; (d) not post, share, or hint at unreleased products, designs, campaigns, or business information on any personal or public channel, including social media, group chats, and portfolios, without written approval from House of Musa; (e) protect any device, account, or document holding Confidential Information with reasonable care, and report any loss or suspected exposure immediately.</p>
+      <p><strong>4. Everything created here stays at House of Musa.</strong> Everything Recipient creates, contributes to, or produces in connection with House of Musa, including designs, garments, content, copy, photographs, video, edits, strategies, documents, data, contact lists, and account content, is a work made for hire and the sole and exclusive property of Musa Group LLC from the moment it is created. To the extent any right does not vest automatically, Recipient assigns all rights, title, and interest in it to Musa Group LLC, and will sign anything reasonably needed to confirm that ownership. Recipient may not take, keep, copy, remove, use, display (including in any portfolio), sell, license, or recreate any of it, during the engagement or after it ends, without written approval from House of Musa. Work created for House of Musa stays at House of Musa.</p>
+      <p><strong>5. Accounts and access.</strong> Anything created or stored in House of Musa accounts, drives, and systems belongs to House of Musa. Recipient&rsquo;s access is a licence to do their work only, and it ends when the engagement ends or whenever House of Musa revokes it.</p>
+      <p><strong>6. No circumvention.</strong> Recipient will not use Confidential Information to contact House of Musa&rsquo;s suppliers, manufacturers, clients, customers, or partners for their own benefit, for a competing business, or on behalf of anyone else, during their engagement and for twelve (12) months after it ends.</p>
+      <p><strong>7. How long this lasts.</strong> The confidentiality obligations begin on the date Recipient signs, cover information received before signing if it was shared in expectation of engagement, and continue for three (3) years after Recipient&rsquo;s engagement ends for any reason. Information that qualifies as a trade secret stays protected for as long as it remains secret. The ownership terms in sections 4 and 5 are permanent and survive the end of the engagement.</p>
+      <p><strong>8. Return of materials.</strong> When the engagement ends, or whenever House of Musa asks, Recipient will promptly return or permanently delete all Confidential Information and House of Musa property in their possession, including copies on personal devices and accounts, and confirm the return or deletion in writing if asked.</p>
+      <p><strong>9. If this Agreement is broken.</strong> Recipient understands that a breach may cause harm that money alone cannot repair, and that House of Musa may seek a court order stopping further disclosure or use, in addition to any other remedies available under law.</p>
+      <p><strong>10. General.</strong> This Agreement is governed by the laws of the District of Columbia. It is the entire agreement between the parties about Confidential Information and ownership of work created for House of Musa, and replaces any earlier understanding on those subjects. If any part is held unenforceable, the rest still applies. Signing electronically, including typing Recipient&rsquo;s full legal name and the date below, counts as Recipient&rsquo;s signature.</p>
+      </div>
+      <div style="height:16px"></div>
+      <div class="nda-checks" id="paNdaChecks">
+        <label class="check"><input type="checkbox" id="paNdaAck1" /><span>I have read this entire Agreement. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" id="paNdaAck2" /><span>I understand this is a one-way agreement that protects House of Musa, and my obligations continue after my engagement with House of Musa ends. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" id="paNdaAck3" /><span>I understand that everything I create for House of Musa belongs to House of Musa and stays at House of Musa, and I may not keep, copy, or use it, including in a portfolio, without written approval. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" id="paNdaAck4" /><span>I agree that typing my full legal name and the date is my electronic signature. <span class="req">*</span></span></label>
+      </div>
+      <div class="grid2">
+        <div class="field" data-required><label for="paSigName">Type your full legal name to sign <span class="req">*</span></label><input id="paSigName" type="text" placeholder="Your full legal name" /><p class="err">Type your full legal name to sign.</p></div>
+        <div class="field"><label for="paSigDate">Date</label><input id="paSigDate" type="text" readonly /></div>
+      </div>
+      <p class="note" id="paNdaMsg" style="color:#9c1c1c;display:none">Check all four acknowledgment boxes and type your full legal name to continue. Your House of Musa email is issued right after this step.</p>
     </div>
 
     <div class="grid2">
@@ -967,6 +1000,37 @@
       <div class="field"><label for="inAvail">Your availability</label><input id="inAvail" type="text" placeholder="Days and times you can work each week" /><p class="hint">The program runs 10 to 20 hours a week, flexible scheduling, over a six month term with an extension option.</p></div>
     </div>
 
+    <div class="card white">
+      <h3>Sign the NDA</h3>
+      <p>Read all of it, check each acknowledgment separately, then sign with your full legal name.</p>
+      <div class="nda-text" tabindex="0" aria-label="Non disclosure agreement text">
+      <p class="nda-title">ONE-WAY NON-DISCLOSURE AND OWNERSHIP AGREEMENT</p>
+      <p>This Agreement is between Musa Group LLC, doing business as House of Musa (&ldquo;House of Musa&rdquo;), and the undersigned individual (&ldquo;Recipient&rdquo;), effective on the date Recipient signs below. It applies to employees, interns, contractors, creators, and suppliers engaged by House of Musa.</p>
+      <p><strong>1. One-way agreement.</strong> House of Musa will share Confidential Information and work materials with Recipient so Recipient can do their work. This Agreement protects House of Musa only. It places obligations on Recipient and gives Recipient no rights in anything House of Musa shares or anything Recipient creates for House of Musa. House of Musa takes on no confidentiality or other obligation to Recipient under this Agreement.</p>
+      <p><strong>2. What counts as Confidential Information.</strong> Everything Recipient sees, hears, receives, or creates through their work that is not public, including: unreleased designs, collections, tech packs, patterns, and samples; supplier, factory, and manufacturer identities, contacts, and pricing; wholesale and retail pricing strategy; customer, client, and partner lists and their contact details and order history; sales figures, revenue, budgets, and financial information; marketing plans, campaign concepts, launch dates, and ad account data; brand imagery, footage, and content before release; business plans and expansion plans; and personal information about the founder, team members, clients, and customers.</p>
+      <p><strong>3. Recipient&rsquo;s obligations.</strong> Recipient will: (a) keep all Confidential Information strictly confidential and disclose it to no one outside House of Musa; (b) use it only to do their House of Musa work, and for no personal or outside purpose; (c) not copy, photograph, record, download, or remove Confidential Information except as their role requires; (d) not post, share, or hint at unreleased products, designs, campaigns, or business information on any personal or public channel, including social media, group chats, and portfolios, without written approval from House of Musa; (e) protect any device, account, or document holding Confidential Information with reasonable care, and report any loss or suspected exposure immediately.</p>
+      <p><strong>4. Everything created here stays at House of Musa.</strong> Everything Recipient creates, contributes to, or produces in connection with House of Musa, including designs, garments, content, copy, photographs, video, edits, strategies, documents, data, contact lists, and account content, is a work made for hire and the sole and exclusive property of Musa Group LLC from the moment it is created. To the extent any right does not vest automatically, Recipient assigns all rights, title, and interest in it to Musa Group LLC, and will sign anything reasonably needed to confirm that ownership. Recipient may not take, keep, copy, remove, use, display (including in any portfolio), sell, license, or recreate any of it, during the engagement or after it ends, without written approval from House of Musa. Work created for House of Musa stays at House of Musa.</p>
+      <p><strong>5. Accounts and access.</strong> Anything created or stored in House of Musa accounts, drives, and systems belongs to House of Musa. Recipient&rsquo;s access is a licence to do their work only, and it ends when the engagement ends or whenever House of Musa revokes it.</p>
+      <p><strong>6. No circumvention.</strong> Recipient will not use Confidential Information to contact House of Musa&rsquo;s suppliers, manufacturers, clients, customers, or partners for their own benefit, for a competing business, or on behalf of anyone else, during their engagement and for twelve (12) months after it ends.</p>
+      <p><strong>7. How long this lasts.</strong> The confidentiality obligations begin on the date Recipient signs, cover information received before signing if it was shared in expectation of engagement, and continue for three (3) years after Recipient&rsquo;s engagement ends for any reason. Information that qualifies as a trade secret stays protected for as long as it remains secret. The ownership terms in sections 4 and 5 are permanent and survive the end of the engagement.</p>
+      <p><strong>8. Return of materials.</strong> When the engagement ends, or whenever House of Musa asks, Recipient will promptly return or permanently delete all Confidential Information and House of Musa property in their possession, including copies on personal devices and accounts, and confirm the return or deletion in writing if asked.</p>
+      <p><strong>9. If this Agreement is broken.</strong> Recipient understands that a breach may cause harm that money alone cannot repair, and that House of Musa may seek a court order stopping further disclosure or use, in addition to any other remedies available under law.</p>
+      <p><strong>10. General.</strong> This Agreement is governed by the laws of the District of Columbia. It is the entire agreement between the parties about Confidential Information and ownership of work created for House of Musa, and replaces any earlier understanding on those subjects. If any part is held unenforceable, the rest still applies. Signing electronically, including typing Recipient&rsquo;s full legal name and the date below, counts as Recipient&rsquo;s signature.</p>
+      </div>
+      <div style="height:16px"></div>
+      <div class="nda-checks" id="internNdaChecks">
+        <label class="check"><input type="checkbox" id="internNdaAck1" /><span>I have read this entire Agreement. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" id="internNdaAck2" /><span>I understand this is a one-way agreement that protects House of Musa, and my obligations continue after my engagement with House of Musa ends. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" id="internNdaAck3" /><span>I understand that everything I create for House of Musa belongs to House of Musa and stays at House of Musa, and I may not keep, copy, or use it, including in a portfolio, without written approval. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" id="internNdaAck4" /><span>I agree that typing my full legal name and the date is my electronic signature. <span class="req">*</span></span></label>
+      </div>
+      <div class="grid2">
+        <div class="field" data-required><label for="internSigName">Type your full legal name to sign <span class="req">*</span></label><input id="internSigName" type="text" placeholder="Your full legal name" /><p class="err">Type your full legal name to sign.</p></div>
+        <div class="field"><label for="internSigDate">Date</label><input id="internSigDate" type="text" readonly /></div>
+      </div>
+      <p class="note" id="internNdaMsg" style="color:#9c1c1c;display:none">Check all four acknowledgment boxes and type your full legal name to continue. Your House of Musa email is issued right after this step.</p>
+    </div>
+
     <div class="field">
       <label>Your internship track</label>
       <div class="radio-row" id="trackRow">
@@ -1009,6 +1073,7 @@
         <li>Show up to the Wednesday meeting with what you shipped, what is blocked, and what is next.</li>
       </ul>
       <div class="nav" style="justify-content:flex-start"><button class="btn gold" id="downloadInternBtn" type="button">Download my intern summary</button></div>
+      <p class="note" id="internSubmitNote" role="alert" style="display:none;color:#9c1c1c;font-weight:400;margin:12px 0 0">Your onboarding could not be sent automatically. Please also send your downloaded summary to info@musathebrand.com so nothing is lost.</p>
     </div>
         <h3 style="margin:18px 0 10px">Your team links, tap to go there</h3>
     <div class="team-links">
@@ -1034,11 +1099,13 @@
   for (var i=1;i<=total;i++){
     var b=document.createElement('button');
     b.type='button'; b.textContent=i; b.setAttribute('aria-label','Go to step '+i);
-    (function(n){ b.addEventListener('click',function(){ goTo(n); }); })(i);
+    (function(n){ b.addEventListener('click',function(){ if (n===total){ submitKore(); } else { goTo(n); } }); })(i);
     dotsWrap.appendChild(b); dots.push(b);
   }
   document.getElementById('sigDate').value = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
   document.getElementById('contractDate').value = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  var paSigDateEl = document.getElementById('paSigDate'); if (paSigDateEl) paSigDateEl.value = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  var internSigDateEl = document.getElementById('internSigDate'); if (internSigDateEl) internSigDateEl.value = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
 
   function val(id){ var el=document.getElementById(id); return el ? el.value.trim() : ''; }
   function dept(){ var r=document.querySelector('input[name="dept"]:checked'); return r ? r.value : ''; }
@@ -1179,7 +1246,11 @@
     btn.addEventListener('click', function(){
       // Example mode: no validation gates. Continue always advances so
       // the whole flow can be clicked through with empty fields.
-      if (current < total) goTo(current+1);
+      // Advancing into the final step is the submit: the payload is sent
+      // to the Google receiver first, and the Done step shows once the
+      // request settles.
+      if (current === total-1){ submitKore(); }
+      else if (current < total) goTo(current+1);
     });
   });
   document.querySelectorAll('[data-back]').forEach(function(btn){
@@ -1243,22 +1314,35 @@
   var dpb = document.getElementById('downloadPaBtn');
   if (dpb) dpb.addEventListener('click', function(){ downloadText('house-of-musa-pa-brief.txt', paBriefLines()); });
   var dsb = document.getElementById('downloadSheetBtn');
-  if (dsb) dsb.addEventListener('click', function(){ syncPaSheet(); downloadText('house-of-musa-pa-assignment-sheet.txt', paBriefLines()); });
+  if (dsb) dsb.addEventListener('click', function(){
+    if (!ndaDonePa()){
+      var paMsg = document.getElementById('paNdaMsg');
+      if (paMsg) paMsg.style.display = 'block';
+      var paSf = document.getElementById('paSigName'); if (paSf && paSf.closest('.field')) markInvalid(paSf.closest('.field'), !val('paSigName'));
+      syncPaGate();
+      return;
+    }
+    syncPaSheet();
+    postToReceiver(buildPaPayload()).then(function(ok){
+      var note = document.getElementById('paSubmitNote');
+      if (note) note.style.display = ok ? 'none' : 'block';
+      downloadText('house-of-musa-pa-assignment-sheet.txt', paBriefLines());
+    });
+  });
   var dib = document.getElementById('downloadInternBtn');
   if (dib) dib.addEventListener('click', function(){
-    var trackEl = document.querySelector('input[name="track"]:checked');
-    downloadText('house-of-musa-intern-summary.txt', ['HOUSE OF MUSA: INTERN ONBOARDING SUMMARY','Reports to: Oluwadoyinsolami Kore Dare-Olude, Integrated Creative & Brand Lead.','',
-      'Name: ' + ((val('inFirstName')+' '+val('inLastName')).trim() || 'Not provided'),
-      'Email: ' + (val('inEmail') || 'Not provided'),
-      'Preferred name / house email: ' + ((slugName(val('inPreferredName')) || 'preferredname') + '@houseofmusa.store') + ' (Google Workspace, works in Gmail like any Gmail account)',
-      'Phone / WhatsApp: ' + (val('inPhone') || 'Not provided'),
-      'School and program: ' + (val('inSchool') || 'Not provided'),
-      'Track: ' + (trackEl ? trackEl.value : 'Not provided'),
-      'Start date: ' + (val('inStart') || 'Not provided'),
-      'Availability: ' + (val('inAvail') || 'Not provided'),
-      'Downloads and accounts, free accounts only (own accounts, no paid plans, no subscriptions): Muse (free account, downloaded on phone and computer), Muse connected to own houseofmusa.store email account and own GitHub account, Claude (free account), WhatsApp (free app, own number), GitHub (free account created on own email, GitHub downloaded: GitHub Desktop on computer and GitHub app on phone), Zernio (free version only)',
-      'Headline project: Design the House of Musa Fashion Week website as a team under Kore, alongside track assignments. Nothing goes live without approval through Kore and the founder.',
-      'Record home: Master onboarding Sheet plus own Drive folder, House of Musa Google Workspace']);
+    if (!ndaDoneIntern()){
+      var inMsg = document.getElementById('internNdaMsg');
+      if (inMsg) inMsg.style.display = 'block';
+      var inSf = document.getElementById('internSigName'); if (inSf && inSf.closest('.field')) markInvalid(inSf.closest('.field'), !val('internSigName'));
+      syncInternGate();
+      return;
+    }
+    postToReceiver(buildInternPayload()).then(function(ok){
+      var note = document.getElementById('internSubmitNote');
+      if (note) note.style.display = ok ? 'none' : 'block';
+      downloadText('house-of-musa-intern-summary.txt', internSummaryLines());
+    });
   });
 
   var prefEl=document.getElementById('preferredName');
@@ -1272,6 +1356,162 @@
   slugPreview('paPreferredName','paEmailPreview');
   slugPreview('inPreferredName','inEmailPreview');
   syncHouseEmail();
+
+  /* Google receiver: final submissions POST to the Google Apps Script web
+     app that files them to the master onboarding Sheet and Drive folders. */
+  var RECEIVER_URL = 'https://script.google.com/macros/s/AKfycbw80h1b1HshOTVPrq-08LbrCL58CjVYjzXlPdwzWlkg1-Dq-veFbidc_7pPDMVAqB88/exec';
+  function postToReceiver(payload){
+    return fetch(RECEIVER_URL, { method:'POST', mode:'no-cors', headers:{ 'Content-Type':'text/plain' }, body: JSON.stringify(payload) })
+      .then(function(){ return true; })
+      .catch(function(){ return false; });
+  }
+  function koreSummaryText(){
+    var lines = ['HOUSE OF MUSA: ONBOARDING SUMMARY','Spread the Gold.',''];
+    document.querySelectorAll('#summaryList > div').forEach(function(d){
+      lines.push(d.querySelector('dt').textContent + ': ' + d.querySelector('dd').textContent);
+    });
+    lines.push('','Next: sign in to your house email, accept your invites, and join your department WhatsApp group.');
+    return lines.join('\n');
+  }
+  function ndaDoneKore(){
+    return document.getElementById('ndaAck1').checked && document.getElementById('ndaAck2').checked && document.getElementById('ndaAck3').checked && document.getElementById('ndaAck4').checked && !!val('sigName');
+  }
+  function agreementDoneKore(){
+    return document.getElementById('agreeAck1').checked && document.getElementById('agreeAck2').checked && document.getElementById('agreeAck3').checked && !!val('contractName');
+  }
+  function buildKorePayload(){
+    return {
+      version: 'Kore',
+      name: (val('firstName')+' '+val('lastName')).trim(),
+      email: val('personalEmail'),
+      phone: val('phone'),
+      whatsapp: val('phone'),
+      role: val('roleTitle') || 'Integrated Creative & Brand Lead',
+      ndaSigned: ndaDoneKore() ? 'Yes' : 'No',
+      agreementSigned: agreementDoneKore() ? 'Yes' : 'No',
+      summary: koreSummaryText(),
+      emergencyContact: [val('emName'), val('emPhone'), val('emRel')].filter(Boolean).join(', '),
+      retainer: 560000,
+      outlookNotes: val('outlookNotes'),
+      paBriefSummary: paBriefLines().join('\n'),
+      paBrief: {
+        priorities: val('paTopPriorities'),
+        weekly: val('paOngoing'),
+        oneoff: val('paOneOff'),
+        deadlines: val('paDeadlines'),
+        reporting: val('paReportBack'),
+        approvals: val('paApproval')
+      }
+    };
+  }
+  function isChecked(id){ var el = document.getElementById(id); return !!(el && el.checked); }
+  function ndaDonePa(){
+    return isChecked('paNdaAck1') && isChecked('paNdaAck2') && isChecked('paNdaAck3') && isChecked('paNdaAck4') && !!val('paSigName');
+  }
+  function agreementDonePa(){
+    var a1 = document.getElementById('paAgreeAck1'), a2 = document.getElementById('paAgreeAck2'), a3 = document.getElementById('paAgreeAck3');
+    if (!a1 || !a2 || !a3) return false;
+    return a1.checked && a2.checked && a3.checked;
+  }
+  function ndaDoneIntern(){
+    return isChecked('internNdaAck1') && isChecked('internNdaAck2') && isChecked('internNdaAck3') && isChecked('internNdaAck4') && !!val('internSigName');
+  }
+  function agreementDoneIntern(){
+    var a1 = document.getElementById('internAgreeAck1'), a2 = document.getElementById('internAgreeAck2'), a3 = document.getElementById('internAgreeAck3');
+    if (!a1 || !a2 || !a3) return false;
+    return a1.checked && a2.checked && a3.checked;
+  }
+  function syncPaGate(){
+    var ok = ndaDonePa();
+    var btn = document.getElementById('downloadSheetBtn');
+    if (btn){ btn.disabled = !ok; btn.style.opacity = ok ? '' : '.55'; btn.style.cursor = ok ? '' : 'not-allowed'; }
+    var msg = document.getElementById('paNdaMsg');
+    if (msg && ok) msg.style.display = 'none';
+    return ok;
+  }
+  function syncInternGate(){
+    var ok = ndaDoneIntern();
+    var btn = document.getElementById('downloadInternBtn');
+    if (btn){ btn.disabled = !ok; btn.style.opacity = ok ? '' : '.55'; btn.style.cursor = ok ? '' : 'not-allowed'; }
+    var msg = document.getElementById('internNdaMsg');
+    if (msg && ok) msg.style.display = 'none';
+    return ok;
+  }
+  function buildPaPayload(){
+    return {
+      version: 'PA',
+      name: (val('paFirstName')+' '+val('paLastName')).trim(),
+      email: val('paEmail'),
+      phone: val('paPhone'),
+      whatsapp: val('paPhone'),
+      role: 'Personal Assistant',
+      ndaSigned: ndaDonePa() ? 'Yes' : '',
+      agreementSigned: agreementDonePa() ? 'Yes' : '',
+      summary: paBriefLines().join('\n')
+    };
+  }
+  function internSummaryLines(){
+    var trackEl = document.querySelector('input[name="track"]:checked');
+    return ['HOUSE OF MUSA: INTERN ONBOARDING SUMMARY','Reports to: Oluwadoyinsolami Kore Dare-Olude, Integrated Creative & Brand Lead.','',
+      'Name: ' + ((val('inFirstName')+' '+val('inLastName')).trim() || 'Not provided'),
+      'Email: ' + (val('inEmail') || 'Not provided'),
+      'Preferred name / house email: ' + ((slugName(val('inPreferredName')) || 'preferredname') + '@houseofmusa.store') + ' (Google Workspace, works in Gmail like any Gmail account)',
+      'Phone / WhatsApp: ' + (val('inPhone') || 'Not provided'),
+      'School and program: ' + (val('inSchool') || 'Not provided'),
+      'Track: ' + (trackEl ? trackEl.value : 'Not provided'),
+      'Start date: ' + (val('inStart') || 'Not provided'),
+      'Availability: ' + (val('inAvail') || 'Not provided'),
+      'Downloads and accounts, free accounts only (own accounts, no paid plans, no subscriptions): Muse (free account, downloaded on phone and computer), Muse connected to own houseofmusa.store email account and own GitHub account, Claude (free account), WhatsApp (free app, own number), GitHub (free account created on own email, GitHub downloaded: GitHub Desktop on computer and GitHub app on phone), Zernio (free version only)',
+      'Headline project: Design the House of Musa Fashion Week website as a team under Kore, alongside track assignments. Nothing goes live without approval through Kore and the founder.',
+      'Record home: Master onboarding Sheet plus own Drive folder, House of Musa Google Workspace'];
+  }
+  function buildInternPayload(){
+    var trackEl = document.querySelector('input[name="track"]:checked');
+    var track = trackEl ? trackEl.value : '';
+    return {
+      version: 'Intern',
+      name: (val('inFirstName')+' '+val('inLastName')).trim(),
+      email: val('inEmail'),
+      phone: val('inPhone'),
+      whatsapp: val('inPhone'),
+      role: track || 'Intern',
+      ndaSigned: ndaDoneIntern() ? 'Yes' : '',
+      agreementSigned: agreementDoneIntern() ? 'Yes' : '',
+      summary: internSummaryLines().join('\n'),
+      track: track,
+      startDate: val('inStart'),
+      downloads: 'Required downloads and accounts from the download step: Muse, Claude, WhatsApp, GitHub, and Zernio, free accounts only on the intern\u2019s own accounts, with Muse connected to their own houseofmusa.store email account and their own GitHub account'
+    };
+  }
+  var koreSubmitState = 'idle';
+  function submitKore(){
+    if (koreSubmitState === 'sent'){ showKoreDone(false); return; }
+    if (koreSubmitState === 'sending') return;
+    koreSubmitState = 'sending';
+    renderSummary(); syncPaSheet();
+    postToReceiver(buildKorePayload()).then(function(ok){
+      koreSubmitState = ok ? 'sent' : 'failed';
+      showKoreDone(!ok);
+    });
+  }
+  function showKoreDone(failed){
+    goTo(total);
+    var note = document.getElementById('koreSubmitNote');
+    if (note) note.style.display = failed ? 'block' : 'none';
+  }
+
+  ['paNdaAck1','paNdaAck2','paNdaAck3','paNdaAck4'].forEach(function(id){
+    var el = document.getElementById(id); if (el) el.addEventListener('change', syncPaGate);
+  });
+  var paSigEl = document.getElementById('paSigName');
+  if (paSigEl){ paSigEl.addEventListener('input', syncPaGate); paSigEl.addEventListener('change', syncPaGate); }
+  ['internNdaAck1','internNdaAck2','internNdaAck3','internNdaAck4'].forEach(function(id){
+    var el = document.getElementById(id); if (el) el.addEventListener('change', syncInternGate);
+  });
+  var internSigEl = document.getElementById('internSigName');
+  if (internSigEl){ internSigEl.addEventListener('input', syncInternGate); internSigEl.addEventListener('change', syncInternGate); }
+  syncPaGate();
+  syncInternGate();
 
   /* Version switcher */
   var viewBtns = Array.prototype.slice.call(document.querySelectorAll('.version-switch button'));
